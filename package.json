@@ -6,5 +6,10 @@
   "repository": "git@github.com:MTES-MCT/trackdechets-scalingo-hook.git",
   "author": "benoit.guigal@beta.gouv.fr",
   "license": "GPL-3.0-or-later",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
 }
