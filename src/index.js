@@ -18,6 +18,7 @@ app.post("/hook", async (req, res, next) => {
   }
   const appId = req.body.app_id;
   const appName = req.body.app_name;
+  console.log("Received hook", JSON.stringify(req.body));
   try {
     await restartApp(appId);
     res.send(`App ${appName} restarted`);
