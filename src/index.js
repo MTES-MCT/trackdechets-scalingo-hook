@@ -3,10 +3,11 @@ const bodyParser = require("body-parser");
 const { restartApp } = require("./scalingo");
 
 const app = express();
-const port = 3000;
 
 // used to authenticate against this app
-const { APP_TOKEN } = process.env;
+const { APP_TOKEN, API_PORT } = process.env;
+
+const port = API_PORT || 3000;
 
 app.use(bodyParser.json());
 
