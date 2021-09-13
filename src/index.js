@@ -16,14 +16,19 @@ app.post("/hook", async (req, res, next) => {
   if (token !== APP_TOKEN) {
     return res.status(403);
   }
+  const eventType = req.body.type;
   const appId = req.body.app_id;
   const appName = req.body.app_name;
   console.log("Received hook", JSON.stringify(req.body));
-  try {
-    await restartApp(appId);
-    res.send(`App ${appName} restarted`);
-  } catch (err) {
-    next(err);
+  if (eventType === "alert") {
+    try {
+      await restartApp(appId);
+      return res.send(`App ${appName} restarted`);
+    } catch (err) {
+      return next(err);
+    }
+  } else {
+    return res.send("OK");
   }
 });
 
