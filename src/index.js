@@ -5,9 +5,9 @@ const { restartApp } = require("./scalingo");
 const app = express();
 
 // used to authenticate against this app
-const { APP_TOKEN, API_PORT } = process.env;
+const { APP_TOKEN, PORT } = process.env;
 
-const port = API_PORT || 3000;
+const port = PORT || 3000;
 
 app.use(bodyParser.json());
 

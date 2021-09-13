@@ -7,6 +7,9 @@
   "author": "benoit.guigal@beta.gouv.fr",
   "license": "GPL-3.0-or-later",
   "private": false,
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "axios": "^0.21.4",
     "body-parser": "^1.19.0",
