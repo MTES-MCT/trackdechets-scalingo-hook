@@ -27,5 +27,7 @@ app.post("/hook", async (req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(
+    `Trackdechets scalingo hook listening at http://localhost:${port}`
+  );
 });
