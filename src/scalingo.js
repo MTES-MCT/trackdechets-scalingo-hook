@@ -1,6 +1,6 @@
 const { default: axios } = require("axios");
 
-const SCALINGO_API_URL = "https://api.osc-fr1.scalingo.com";
+const SCALINGO_API_URL = "https://api.osc-secnum-fr1.scalingo.com";
 
 const { SCALINGO_TOKEN } = process.env;
 
